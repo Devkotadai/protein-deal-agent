@@ -12,7 +12,7 @@ Open [`prompts/daily-agent.md`](../prompts/daily-agent.md) and replace:
 |---|---|
 | `{{YOUR_NAME}}` | Your name |
 | `{{YOUR_EMAIL}}` | Where the digest goes |
-| `{{PRODUCTS_DATA_SOURCE_URL}}` etc. | The four `collection://...` URLs |
+| `{{PRODUCTS_DATA_SOURCE_URL}}` etc. | The five `collection://...` URLs, including `{{TRUSTED_RETAILERS_DATA_SOURCE_URL}}` |
 | `{{NOTION_HOME_PAGE_URL}}` | The Notion page URL |
 
 Keep the filled-in copy out of the repo (see `.gitignore`), since it contains your email address and workspace IDs.

@@ -1,6 +1,6 @@
 # Notion database layout
 
-Everything lives under one Notion page (e.g. "Protein Deal Agent") with four databases. Relations link them together so the agent can see what you liked, what's running low, and what it found before.
+Everything lives under one Notion page (e.g. "Protein Deal Agent") with five databases (Trusted Retailers stands alone). Relations link the others together so the agent can see what you liked, what's running low, and what it found before.
 
 ```
 Products ──< Consumption Log

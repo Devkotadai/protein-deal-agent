@@ -1,0 +1,5 @@
+# Filled-in prompts contain your email and workspace IDs
+*.local.md
+prompts/*.local.md
+.env
+.DS_Store

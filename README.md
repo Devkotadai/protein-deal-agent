@@ -1,8 +1,6 @@
 # Protein deal agent
 
-A Claude agent that runs every morning, searches the web for protein deals, and emails you the top 10 ranked by **price per gram of protein**, never per ounce.
-
-It remembers what you've tried and whether you liked it, avoids ingredients you've flagged, watches what's running low, and logs every deal to Notion.
+A Claude agent that runs every morning, searches the web for protein deals, and emails you the top 10 ranked by Price per gram of protein. It remembers what you've tried and whether you liked it, avoids ingredients you've flagged, watches what's running low, and logs every deal to Notion.
 
 ## What it does each morning
 

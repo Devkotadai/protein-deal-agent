@@ -1,6 +1,6 @@
 # Notion database layout
 
-Everything lives under one Notion page (e.g. "Protein Deal Agent") with four databases. Relations link them together so the agent can see what you liked, what's running low, and what it found before.
+Everything lives under one Notion page (e.g. "Protein Deal Agent") with five databases (Trusted Retailers stands alone). Relations link the others together so the agent can see what you liked, what's running low, and what it found before.
 
 ```
 Products ──< Consumption Log
@@ -103,3 +103,28 @@ if(prop("Total protein (g)") > 0, round(prop("Price ($)") / prop("Total protein 
 // Daily Deals › $ per 25g protein
 if(prop("Total protein (g)") > 0, round(prop("Price ($)") / prop("Total protein (g)") * 25 * 100) / 100, empty())
 ```
+
+## Trusted Retailers
+
+The only stores the agent may use. Edit freely: untick **Active** to pause a store, add a row to allow a new one.
+
+| Property | Type | Notes |
+|---|---|---|
+| Retailer | Title | Store name |
+| Website | URL | Home page |
+| Active | Checkbox | Only checked rows are used |
+| Seller rule | Text | Which sellers count, e.g. "Only Sold and shipped by Walmart.com" |
+| Type | Select | Big-box, Warehouse club, Supplement store, Brand site, Grocery |
+| Notes | Text | Extra handling, e.g. "If the price isn't online, list under Couldn't verify" |
+
+## Columns added for bars and drinks
+
+Both **Products** and **Daily Deals** have:
+
+| Property | Type | Notes |
+|---|---|---|
+| Category | Select | Powder, Bar, Drink |
+| Calories per serving | Number | From the Nutrition Facts panel |
+| Cal per g protein | Formula | `Calories per serving ÷ Protein per serving (g)`, 1 decimal |
+
+**Daily Deals** also has **Protein per serving (g)** (number), **Key ingredients / flags** (text), and **$ per 25g protein** (formula: `Price ÷ Total protein × 25`).

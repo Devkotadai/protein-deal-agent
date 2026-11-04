@@ -17,3 +17,10 @@ One HTML email per day, sent so it lands by 9:00 AM Eastern. The agent fills in 
 $ per 100 g is not shown. Calories per gram of protein = calories ÷ protein per serving (about 4 is near-pure protein; green up to 5.0, amber up to 8.0, red above).
 
 If fewer than 10 deals could be verified, the email says so in the stats strip and footer. If the search failed entirely, a short plain email explains what failed.
+
+## Readability rules (Nov 3 redesign)
+
+- Powders, bars and drinks each get their own card with a colored header band (green, orange, blue) and a gap between cards.
+- Text is dark on white; white text appears only inside dark colored bands.
+- Gmail drops the CSS `background:` shorthand. Use the `bgcolor` attribute plus `background-color` on every colored cell.
+- Sizes: product names 17px, details 15px, ingredients 14px, nothing under 13px.
